@@ -1,5 +1,5 @@
-class todoListItemPriority {
-  #priority;
+class Priority {
+  #value;
 
   static #rankMap = {
     none: 0,
@@ -8,20 +8,20 @@ class todoListItemPriority {
     high: 3,
   };
 
-  constructor(priority) {
-    if (!todoListItemPriority.#rankMap[priority]) {
+  constructor(value) {
+    if (!Priority.#rankMap[value]) {
       throw new Error("Invalid priority");
     }
 
-    this.#priority = priority;
+    this.#value = value;
   }
 
   #rank() {
-    return todoListItemPriority.#rankMap[this.#priority];
+    return Priority.#rankMap[this.#value];
   }
 
   getPriority() {
-    return this.#priority;
+    return this.#value;
   }
 
   isHigherThan(otherPriority) {
@@ -37,4 +37,4 @@ class todoListItemPriority {
   }
 }
 
-export default todoListItemPriority;
+export default Priority;

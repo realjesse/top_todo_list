@@ -2,10 +2,10 @@ class Priority {
   #value;
 
   static #rankMap = {
-    none: 0,
-    low: 1,
-    medium: 2,
-    high: 3,
+    none: 1,
+    low: 2,
+    medium: 3,
+    high: 4,
   };
 
   constructor(value) {

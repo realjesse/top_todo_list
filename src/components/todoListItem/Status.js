@@ -2,7 +2,7 @@ class Status {
   #value;
 
   constructor(value) {
-    if (value !== "complete" || value !== "incomplete") {
+    if (value !== "complete" && value !== "incomplete") {
       throw new Error("Invalid status");
     }
 

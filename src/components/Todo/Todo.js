@@ -3,7 +3,7 @@ import Status from "./Status";
 import Title from "./Title";
 // private variables!
 class Todo {
-  constructor({ title, priority }) {
+  constructor({ title, priority, status }) {
     if (!(title instanceof Title)) {
       throw new Error("Title must be type Title");
     }
@@ -12,7 +12,10 @@ class Todo {
       throw new Error("Priority argument must be type Priority");
     }
     this.priority = priority;
-    this.status = new Status("incomplete");
+    if (!(status instanceof Status)) {
+      throw new Error("Status must be type Status");
+    }
+    this.status = status;
   }
 }
 

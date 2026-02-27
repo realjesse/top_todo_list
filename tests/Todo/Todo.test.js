@@ -1,6 +1,6 @@
-import Priority from "../../src/components/todoListItem/Priority";
-import Todo from "../../src/components/todoListItem/Todo";
-import Title from "../../src/components/todoListItem/Title";
+import Priority from "../../src/components/Todo/Priority";
+import Todo from "../../src/components/Todo/Todo";
+import Title from "../../src/components/Todo/Title";
 
 test("Todo initializes correctly with valid construtors", () => {
   const title = new Title("valid");

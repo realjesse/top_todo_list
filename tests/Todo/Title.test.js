@@ -1,4 +1,4 @@
-import Title from "../../src/components/todoListItem/Title";
+import Title from "../../src/components/Todo/Title";
 
 test("instantiates correctly with valid argument", () => {
   expect(() => new Title("valid")).not.toThrow();
